@@ -1,0 +1,111 @@
+:root {
+  --bg-main: #fbf8f5;
+  --accent: #b76e79;
+  --text-main: #2e2e2e;
+  --soft-border: #e8e1dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: 2rem 4rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.hero h1 {
+  font-family: "Georgia", serif;
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.hero em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.tag {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+}
+
+.hero-visual .placeholder {
+  background-color: #e7d6d8;
+  border-radius: 16px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b4c50;
+}
+
+section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid var(--soft-border);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
