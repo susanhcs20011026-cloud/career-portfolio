@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name — Career Portfolio</title>
+  <title>Susan Huang — Career Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap"
+  rel="stylesheet"/>
 </head>
 
 <body>
   <header class="site-header">
     <nav class="nav">
-      <div class="logo">Your Name</div>
+      <div class="logo">Susan Huang</div>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
         <span class="tag">Selected Projects</span>
@@ -32,60 +35,95 @@
           I work at the intersection of research, digital culture,
           and creative technology—building thoughtful, human-centered projects.
         </p>
-        <a class="cta" href="#projects">View Projects</a>
       </div>
 
       <div class="hero-visual">
-        <!-- 之后可以换成 project 拼贴 / 图片 -->
         <div class="placeholder">Project Visual</div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="projects">
       <h2>Projects</h2>
-
       <div class="project-list">
-        <article class="project-card">
-          <h3>Project Title</h3>
+        <article class="project-card" data-index="01">
+          <h3>Consumer Insight Analysis</h3>
           <p>
-            A short description of the problem, approach,
-            and outcome of this project.
+            Applied Python and statistical modeling to analyze human behavior 
+            patterns in digital environments.
           </p>
         </article>
 
-        <article class="project-card">
-          <h3>Another Project</h3>
+        <article class="project-card" data-index="02">
+          <h3>Digital Still Life</h3>
           <p>
-            Research-driven exploration of digital media,
-            interaction, or data.
+            An exploration of web-based design using pure CSS to recreate 
+            physical objects and coffee culture.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-      <h2>About</h2>
-      <p>
-        I am a student and digital researcher interested in how
-        technology, culture, and human experience intersect.
-        My work focuses on clarity, reflection, and intentional design.
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <p class="skills-subtitle">
+        Marketing · Operation · Data Analysis · Digital Culture · Web-Based Design · Research 
+      </p>
+      <p class="skills-description">
+        My work combines qualitative research, data-informed analysis, and web-based experimentation.
       </p>
     </section>
 
-    <!-- CONTACT -->
+   <section id="about" class="about">
+  <h2>About</h2>
+  <p>
+    I am a student and digital researcher interested in how
+    technology, culture, and human experience intersect.
+    My work focuses on clarity, reflection, and intentional design.
+  </p>
+  
+  <div class="resume-actions">
+    <a href="javascript:void(0)" class="btn-preview" onclick="toggleResume()">
+      <span class="icon"></span> Preview Resume
+    </a>
+
+    <a href="Susan_Huang_Resume.pdf" class="btn-resume" download>
+      <span class="icon">↓</span> Download PDF
+    </a>
+  </div>
+
+  <div id="resume-frame" class="resume-preview" style="margin-top: 3rem; display: none;">
+    <h3>Resume Preview</h3>
+    <div class="preview-container">
+      <iframe src="Susan_Huang_Resume.pdf" width="100%" height="600px" style="border: none;"></iframe>
+    </div>
+  </div>
+</section>
+
     <section id="contact" class="contact">
       <h2>Contact</h2>
       <p>
-        Email: <a href="mailto:your@email.com">your@email.com</a><br />
-        GitHub: <a href="https://github.com/yourusername">yourusername</a>
+        Email: <a href="mailto:susanhhuang@email.com">susanhcs20011026@email.com</a><br>
+        GitHub: <a href="https://github.com/susanhcs20011026-cloud">susanhcs20011026-cloud</a><br>
+        Linkedin: <a href="https://www.linkedin.com/in/chushansusanhcs">Chushan Huang</a>
       </p>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Your Name</p>
+    <p>© 2026 Susan Huang</p>
   </footer>
+  <script>
+  function toggleResume() {
+    const frame = document.getElementById('resume-frame');
+    if (frame.style.display === 'none') {
+      frame.style.display = 'block';
+      // 可选：点击后自动平滑滚动到预览区
+      frame.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      frame.style.display = 'none';
+    }
+  }
+</script>
 </body>
 </html>
+
